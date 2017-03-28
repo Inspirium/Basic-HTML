@@ -9,6 +9,9 @@
 @import "variables";
 @import "mixins";
 
+//import our variables
+@import "custom/variations";
+
 // Reset and dependencies
 @import "normalize";
 @import "print";
