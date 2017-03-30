@@ -5,7 +5,7 @@ $headings-font-weight: 300;
 $color-sidebar: #262A33;
 $color-mainpanel: #F6F6F6;
 $color-nav: #0085B2;
-$color-nav_text: #00A3D9;
+$color-nav_text: #00B6F2;
 $color-select: #0085B2;
 $color-incomplete: #FF8000;
 $color-complete: #59B200;
@@ -45,10 +45,32 @@ $color-complete: #59B200;
     align-self: center;
 }
 
+.header .tag {
+    display: inline-block;
+    position: absolute;
+    margin-left: .5rem;
+    margin-top: 13px;
+    padding: .15rem .25rem;
+    line-height: .7rem;
+    border-radius: 20%;
+    font-size: .6rem;
+    text-align: center;
+    border: 1px solid $color-nav;
+}
+
+.header .tag-danger {
+    background-color: #D90000;
+}
+
 .nav-link-icon {
     width: 70px;
     height: 70px;
     text-align: center;
+    
+    &:hover {
+    text-decoration: none;
+    background-color: lighten($color-nav, 5%);
+    }
 }
 
 .header .navbar {
@@ -67,7 +89,7 @@ $color-complete: #59B200;
     text-transform: uppercase;
     
     &:hover {
-        color: lighten($color-nav, 50%);
+        background-color: lighten($color-nav, 5%);
     }
     
     .header-profile {
@@ -124,8 +146,12 @@ $color-complete: #59B200;
     }
         
     :hover {
-        color: lighten($color-nav, 50%);
+        color: $white;
     }
+}
+
+.bottom-nav .nav-link:hover {
+    background-color: $color-nav;
 }
 
 
@@ -154,6 +180,10 @@ $color-complete: #59B200;
     color: lighten($color-sidebar, 50%);
     font-size: .9rem;
     white-space: nowrap;
+    
+    &:hover {
+        background-color: lighten($color-sidebar, 3%);
+    }
 }
     
 .sidebar .nav-pills .nav-link.active {
@@ -178,6 +208,6 @@ $color-complete: #59B200;
     margin-right: 8px;
     position: relative;
     top: 3px;
-    background: $color-sidebar;
+    background-color: $color-sidebar;
 }
 
