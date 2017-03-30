@@ -4,13 +4,56 @@
     <meta charset="UTF-8">
     <title>HSP</title>
     <link rel="stylesheet" href="dist/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/b494914ae1.js"></script>
 </head>
 <body>
 
-<div class="container-fluid">
-    <h1>Hello World!</h1>
-    <p>This is a test</p>
-    <p>This is a test</p>
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="brand">
+            <img src="img/sk_logo.svg" href="#">
+        </div>
+        <nav class="nav nav-pills flex-column sidebar-menu">
+            <a class="nav-link" href="#">Info</a>
+            <a class="nav-link" href="#">Utrošak vremena</a>
+            <a class="nav-link" href="#">Troškovi</a>
+            <a class="nav-link active incomplete" href="#">Prihodi</a>
+            <a class="nav-link" href="#">Dokumenti</a>
+        </nav>
+    </div>
+    <div class="main-panel">
+        <div class="header">
+            <nav class="navbar main-nav d-flex flex-row-reverse">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ime i prezime
+                    <img src="http://placehold.it/50x50" href="#" class="header-profile">
+                </a>
+                <a href="#" class="nav-item nav-link-icon d-flex">
+                    <i class="fa fa-camera-retro"></i>
+                </a>                
+                <a href="#" class="nav-item nav-link-icon d-flex">
+                    <i class="fa fa-camera-retro"></i>
+                </a>
+                <nav class="breadcrumb d-flex align-items-center">
+                    <a class="breadcrumb-item" href="#">Početna</a>
+                    <a class="breadcrumb-item" href="#">Produkcija</a>
+                    <a class="breadcrumb-item" href="#">Obrada teksta</a>
+                    <span class="breadcrumb-item active">Tehnička obrada</span>
+                </nav>                
+            </nav>
+        </div>
+
+        <div class="bottom-nav">
+            <nav class="nav nav-pills">
+                <a class="nav-link active" href="#">Info</a>
+                <a class="nav-link" href="#">Utrošak vremena</a>
+                <a class="nav-link" href="#">Troškovi</a>
+                <a class="nav-link active" href="#">Prihodi</a>
+                <a class="nav-link" href="#">Dokumenti</a>
+            </nav>  
+        </div>  
+    </div>
+    
 </div>
 
 <script src="http://localhost:8080/webpack-dev-server.js"></script>

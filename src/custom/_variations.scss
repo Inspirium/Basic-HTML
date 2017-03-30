@@ -1,1 +1,183 @@
 $brand-primary: $teal !default;
+$font-family-base: 'Open Sans', sans-serif;
+$headings-font-weight: 300;
+
+$color-sidebar: #262A33;
+$color-mainpanel: #F6F6F6;
+$color-nav: #0085B2;
+$color-nav_text: #00A3D9;
+$color-select: #0085B2;
+$color-incomplete: #FF8000;
+$color-complete: #59B200;
+
+
+//////////Main layout
+
+.wrapper {
+    padding: 0;
+    height: 1000px;
+    max-width: 100%;
+    display: flex;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: $color-sidebar;
+}
+
+.main-panel {
+    background-color: $color-mainpanel;
+    flex: 1;
+}
+
+.main-nav {
+    background-color: $color-nav;
+    height: 70px;
+}
+
+
+//////////Styles
+
+//////////Main-nav styles
+
+.header .fa {
+    color: $white;
+    align-self: center;
+}
+
+.nav-link-icon {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+.header .navbar {
+    padding: 0;
+}
+
+.header .navbar > a {
+    border-left: 1px solid lighten($color-nav, 5%);
+    justify-content: center;
+    color: $white;
+}
+
+.header .dropdown-toggle {
+    padding: 0 auto;
+    font-size: .8rem;
+    text-transform: uppercase;
+    
+    &:hover {
+        color: lighten($color-nav, 50%);
+    }
+    
+    .header-profile {
+        margin: 0 .3rem;
+        border-radius: 50%;
+        border: 3px solid $white;
+    }
+}
+
+////// Breadcrumb
+
+.header .breadcrumb {
+    height: 70px;
+    margin-right: auto;
+    background-color: $color-nav;
+    text-transform: uppercase;
+    font-size: .9rem;
+    align-self: center;
+    margin-bottom: 0;
+    font-weight: 300;
+    white-space: nowrap;
+    
+    a {
+        color: $color-nav_text;
+    }
+    
+    .active {
+        color: $white;
+    }
+}
+
+//////////Bottom-nav styles
+
+.bottom-nav .nav-pills .nav-link,
+.sidebar .nav-pills .nav-link {
+    border-radius: 0;
+}
+
+.bottom-nav .nav-pills .nav-link.active {
+    height: 50px;
+    padding-top: 13px;
+    background-color: $color-mainpanel;
+    color: $color-nav;
+}
+
+.bottom-nav {
+    background-color: lighten($color-nav, 5%);
+    height: 50px;
+    align-items: center;
+    
+    a {
+        color: $white;
+        padding-top: 13px;
+    }
+        
+    :hover {
+        color: lighten($color-nav, 50%);
+    }
+}
+
+
+//////////Sidebar styles
+
+//////Brand placeholder
+
+.brand {
+    display: flex;
+    height: 160px;
+}
+
+.brand img {
+    margin: 0 auto;
+}
+
+
+//////Menu styles
+
+.sidebar .nav-link {
+    height: 60px;
+    border-top: 1px solid lighten($color-sidebar, 10%);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    color: lighten($color-sidebar, 50%);
+    font-size: .9rem;
+    white-space: nowrap;
+}
+    
+.sidebar .nav-pills .nav-link.active {
+    background-color: $color-select;
+}
+
+.sidebar .nav-pills .nav-link.active:before {
+    content: "";
+    box-shadow: 0 0 0 0;
+    background: none;
+}
+
+///sidebar menu dot; default, complete, incomplete - depends on page status
+.sidebar .nav-pills .nav-link:before {
+    content: " ";
+    display: inline-block;
+    box-shadow: 0 0 0 1px lighten($color-sidebar, 10%);
+    margin: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    top: 3px;
+    background: $color-sidebar;
+}
+
