@@ -49,15 +49,12 @@
 // Utility classes
 @import "utilities";
 
-@import "custom/custom";
-
 // Mixins
 @import "mdb/free/data/prefixer";
 @import "mdb/free/data/mixins";
 
 // Variables
 @import "mdb/free/data/colors";
-@import "mdb/free/data/variables-b4";
 @import "mdb/free/data/variables";
 
 //Global
@@ -117,3 +114,6 @@
 @import "mdb/pro/sections/team";
 @import "mdb/pro/sections/templates";
 @import "mdb/pro/sections/social";
+
+// CUSTOM
+@import "custom/custom";
