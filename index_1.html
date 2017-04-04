@@ -8,29 +8,45 @@
     <script src="https://use.fontawesome.com/b494914ae1.js"></script>
     <link rel="stylesheet" href="dist/app.css">
 </head>
+
 <body class="fixed-sn mdb-skin">
 
+
+
+<!--Double navigation-->
 <header>
     <!-- Sidebar navigation -->
-    <ul id="slide-out" class="side-nav fixed custom-scrollbar">
+    <ul id="slide-out" class="side-nav fixed sn-bg-1 custom-scrollbar">
         <!-- Logo -->
         <li>
-            <div class="brand">
-                <img src="img/sk_logo.svg" href="#">
+            <div class="logo-wrapper waves-light">
+                <a href="#"><img src="http://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center"></a>
             </div>
         </li>
         <!--/. Logo -->
+        <!--Social-->
+        <li>
+            <ul class="social">
+                <li><a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a></li>
+                <li><a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a></li>
+                <li><a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a></li>
+                <li><a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a></li>
+            </ul>
+        </li>
+        <!--/Social-->
+        <!--Search Form-->
+        <li>
+            <form class="search-form" role="search">
+                <div class="form-group waves-light">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </form>
+        </li>
+        <!--/.Search Form-->
         <!-- Side navigation links -->
         <li>
             <ul class="collapsible collapsible-accordion">
-               
-               
-               
-               
-                <li>
-                    <a class="stef collapsible-header waves-effect arrow-r">Submit blog
-                        <i class="fa fa-angle-down rotate-icon"></i>
-                    </a>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-chevron-right"></i> Submit blog<i class="fa fa-angle-down rotate-icon"></i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="#" class="waves-effect">Submit listing</a>
@@ -40,15 +56,7 @@
                         </ul>
                     </div>
                 </li>
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a class="collapsible-header waves-effect arrow-r">Instruction<i class="fa fa-angle-down rotate-icon"></i></a>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i> Instruction<i class="fa fa-angle-down rotate-icon"></i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="#" class="waves-effect">For bloggers</a>
@@ -58,7 +66,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a class="collapsible-header waves-effect arrow-r">About<i class="fa fa-angle-down rotate-icon"></i></a>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-eye"></i> About<i class="fa fa-angle-down rotate-icon"></i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="#" class="waves-effect">Introduction</a>
@@ -68,7 +76,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a class="collapsible-header waves-effect arrow-r">Contact me<i class="fa fa-angle-down rotate-icon"></i></a>
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact me<i class="fa fa-angle-down rotate-icon"></i></a>
                     <div class="collapsible-body">
                         <ul>
                             <li><a href="#" class="waves-effect">FAQ</a>
@@ -80,6 +88,8 @@
                 </li>
             </ul>
         </li>
+        <!--/. Side navigation links -->
+        <div class="sidenav-bg mask-strong"></div>
     </ul>
     <!--/. Sidebar navigation -->
     <!-- Navbar -->
@@ -116,131 +126,20 @@
     </nav>
     <!-- /.Navbar -->
 </header>
-
-<div class="wrapper">
-    <div class="sidebar">
-        <div class="brand">
-            <img src="img/sk_logo.svg" href="#">
-        </div>
-        <nav class="nav nav-pills flex-column sidebar-menu">
-            <a class="nav-link" href="#">Info</a>
-            <a class="nav-link" href="#">Utrošak vremena</a>
-            <a class="nav-link" href="#">Troškovi</a>
-            <a class="nav-link active incomplete" href="#">Prihodi</a>
-            <a class="nav-link" href="#">Dokumenti</a>
-        </nav>
+<!--/.Double navigation-->
+<!--Main layout-->
+<main>
+    <div class="container-fluid">
+        <h2>Advanced Double Navigation with fixed SideNav & fixed Navbar:</h2>
+        <br>
+        <h5>1. Fixed side menu, hidden on small devices</h5>
+        <h5>2. Fixed Navbar. It will always stay visible on the top, even when you scroll down.</h5>
+        <p><strong>Note: </strong>To make your Navbar fixed on large screens and non-fixed on mobile, add <code>.mobile-nofixed</code> class to your Navbar</p>
+        <div style="height: 2000px"></div>
     </div>
-    <div class="main-panel">
-        <div class="header">
-            <nav class="navbar main-nav d-flex flex-row-reverse">
-                <a class="nav-link dropdown-toggle user-nav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ime i prezime
-                    <img src="http://placehold.it/50x50" href="#" class="header-profile">
-                </a>
-                <a href="#" class="nav-item nav-link-icon d-flex">
+</main>
+<!--/Main layout-->
 
-                    <i class="fa fa-bell"></i>
-                    <span class="tag tag-danger">4</span>
-                </a>
-                <a href="#" class="nav-item nav-link-icon d-flex">
-                    <i class="fa fa-search"></i>
-                </a>
-                <nav class="breadcrumb d-flex align-items-center">
-                    <a class="breadcrumb-item" href="#">Početna</a>
-                    <a class="breadcrumb-item" href="#">Produkcija</a>
-                    <a class="breadcrumb-item" href="#">Obrada teksta</a>
-                    <span class="breadcrumb-item active">Tehnička obrada</span>
-                </nav>
-            </nav>
-        </div>
-
-        <div class="bottom-nav">
-            <nav class="nav nav-pills">
-                <a class="nav-link active" href="#">Info</a>
-                <a class="nav-link" href="#">Utrošak vremena</a>
-                <a class="nav-link" href="#">Troškovi</a>
-                <a class="nav-link active" href="#">Prihodi</a>
-                <a class="nav-link" href="#">Dokumenti</a>
-            </nav>
-        </div>
-        <div>
-        
-<table class="table">
-    <thead>
-        <tr >
-            <th>#</th>
-            <th></th>
-            <th >First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-            <th class="text-right">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>
-                <fieldset class="form-group">
-                    <input type="checkbox" id="checkbox1">
-                    <label for="checkbox1"></label>
-                </fieldset>
-            </td>
-            <td>Ashley</td>
-            <td>Lynwood</td>
-            <td>@ashow</td>
-            <td class="text-right">
-                <a class="blue-text"><i class="fa fa-user"></i></a>
-                <a class="teal-text"><i class="fa fa-pencil"></i></a>
-                <a class="red-text"><i class="fa fa-times"></i></a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>
-                <fieldset class="form-group">
-                    <input type="checkbox" id="checkbox2">
-                    <label for="checkbox2"></label>
-                </fieldset>
-            </td>
-            <td>Billy</td>
-            <td>Cullen</td>
-            <td>@cullby</td>
-            <td class="text-right">
-                <a class="blue-text"><i class="fa fa-user"></i></a>
-                <a class="teal-text"><i class="fa fa-pencil"></i></a>
-                <a class="red-text"><i class="fa fa-times"></i></a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>
-                <fieldset class="form-group">
-                    <input type="checkbox" id="checkbox3">
-                    <label for="checkbox3"></label>
-                </fieldset>
-            </td>
-            <td>Ariel</td>
-            <td>Macy</td>
-            <td>@arielsea</td>
-            <td class="text-right">
-                <a class="blue-text"><i class="fa fa-user"></i></a>
-                <a class="teal-text"><i class="fa fa-pencil"></i></a>
-                <a class="red-text"><i class="fa fa-times"></i></a>
-            </td>
-        </tr>
-
-    </tbody>
-</table>
-
-
-
-
-        </div>    
-        
-        
-        
-    </div>
-
-</div>
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
