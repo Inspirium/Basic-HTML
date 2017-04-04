@@ -7,4 +7,5 @@ This is a basic HTML outline of HSP project. It primary purpose is for testing d
 - Clone this project to desired location
 - install dependecies `npm install`
 - compile with `npm run dev`
+- add `MDB Pro` to src dir (license doesn't allow us to add it directly here)
 

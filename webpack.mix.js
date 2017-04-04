@@ -16,7 +16,7 @@ mix.options({
  |
  */
 
-mix.sass('src/app.scss', 'dist/', {includePaths: ['node_modules/bootstrap/scss']});
+mix.sass('src/app.scss', 'dist/', {includePaths: ['node_modules/bootstrap/scss', 'src/MDB Pro/sass']});
 
 // Full API
 // mix.js(src, output);
