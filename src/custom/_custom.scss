@@ -1,5 +1,11 @@
 //////////Main layout
 
+body {
+    font-family: $font-family-base;
+    background-color: $color-mainpanel;
+    color: $color-body_text;
+}
+
 .wrapper {
     padding: 0;
     height: 1000px;
@@ -12,22 +18,26 @@
     background-color: $color-sidebar;
 }
 
-.main-panel {
+.container-fluid {
     background-color: $color-mainpanel;
     flex: 1;
     padding-left: 260px;
 }
 
 @media only screen and (max-width : 1440px) {
-  header, .main-panel {
+  header, .container-fluid, .main-content {
     padding-left: 0;
   }
 }
 
-
 .main-nav {
     background-color: $color-nav;
     height: 70px;
+}
+
+.content {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -35,6 +45,9 @@
 
 //////////Main-nav styles
 
+.navbar {
+    box-shadow: none;
+}
 
 .header .fa {
     color: $white;
@@ -69,8 +82,24 @@
     }
 }
 
+@media only screen and (max-width : 1440px) {
+.navbar .button-collapse {
+    display: block;
+    position: relative;
+    font-size: 2rem;
+    margin-top: -5px;
+    margin-right: 0;
+    margin-left: 20px;
+    }
+}
+
+.header .user-nav {
+    height: 70px;
+}
+
 .header .navbar {
     padding: 0;
+    border-radius: 0;
 }
 
 .header .navbar > a {
@@ -97,19 +126,24 @@
 
 ////// Breadcrumb
 
-.header .breadcrumb {
+.header .navbar .breadcrumb {
     height: 70px;
     margin-right: auto;
     background-color: $color-nav;
     text-transform: uppercase;
     font-size: .9rem;
+    padding-left: 2rem;
     align-self: center;
     margin-bottom: 0;
     font-weight: 300;
     white-space: nowrap;
     
+    &:before {
+        color: aqua;
+    }
+    
     a {
-        color: $color-nav_text;
+        color: $rgba-white-light;
     }
     
     .active {
@@ -117,37 +151,40 @@
     }
 }
 
-//////////Bottom-nav styles
-
-.bottom-nav .nav-pills .nav-link,
-.sidebar .nav-pills .nav-link {
-    border-radius: 0;
+.breadcrumb-item + .breadcrumb-item::before {
+    color: $white;
 }
 
-.bottom-nav .nav-pills .nav-link.active {
-    height: 50px;
-    padding-top: 13px;
-    background-color: $color-mainpanel;
-    color: $color-nav;
-}
+//////////Tabs-wrapper
 
-.bottom-nav {
+.classic-tabs.tabs-cyan {
     background-color: lighten($color-nav, 5%);
-    height: 50px;
-    align-items: center;
+}
+
+.classic-tabs.tabs-cyan li a.active {
+    border-color: $color-mainpanel;
+}
+
+
+.classic-tabs li a {
+    display: block;
+    padding: 20px 24px;
+    font-size: .95rem;
+    text-transform: uppercase;
+    color: $rgba-white-light;
+    text-align: center;
+    border-radius: 0;
     
-    a {
+    &.active {
+        border-bottom: 5px solid $color-mainpanel;
         color: $white;
-        padding-top: 13px;
-    }
-        
-    :hover {
-        color: $white;
+        border-radius: 0;
     }
 }
 
-.bottom-nav .nav-link:hover {
-    background-color: $color-nav;
+@media only screen and (min-width: 62em) {
+    .classic-tabs li:first-child {
+    margin-left: 0;}
 }
 
 
@@ -171,10 +208,12 @@
     margin-bottom: 0;
     margin-top:  0;
     height: 60px;
+    font-size: 1rem;
 }
 
 .side-nav {
     width: 260px;
+    letter-spacing: .05rem;
 }
 
 .side-nav .sidenav-bg {
@@ -193,7 +232,6 @@
     border-top: 1px solid lighten($color-sidebar, 10%);
     text-transform: uppercase;
     color: lighten($color-sidebar, 50%);
-    font-size: .9rem;
     white-space: nowrap;
     padding-right: 0;
     padding-left: 0;
@@ -204,7 +242,6 @@
     height: 60px;
     text-transform: uppercase;
     color: lighten($color-sidebar, 50%);
-    font-size: .9rem;
     white-space: nowrap;
     padding: .5em 1em;
     
@@ -212,12 +249,47 @@
         background-color: lighten($color-sidebar, 3%);
     }
 }
+
+///sidebar menu sublinks
+.side-nav .collapsible-body ul > li {
+    line-height: 45px;
+    height: 45px;
+    
+    &:hover {
+        background-color: lighten($color-sidebar, 3%);      
+    }
+    
+    a {
+        line-height: 45px;  
+        font-size: .8rem;
+        height: 45px;
+        
+        &:before {
+            content: " ";
+            display: inline-block;
+            box-shadow: 0 0 0 1px lighten($color-sidebar, 10%);
+            margin: 3px 8px 3px 3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: relative;
+            top: 3px;
+            background-color: $color-sidebar;
+        }
+    }
+    
+    &:active {
+        background-color: $color-sidebar;
+    }
+
+}
     
 .sidebar .nav-pills .nav-link.active {
     background-color: $color-select;
-    color: $color-white;
+    color: $white;
 }
 
+///sidebar menu links status dots
 .sidebar .nav-pills .nav-link.active:before {
     content: "";
     box-shadow: 0 0 0 0;
