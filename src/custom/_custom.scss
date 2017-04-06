@@ -37,7 +37,7 @@ body {
 
 .content {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 15px;
 }
 
 
@@ -52,6 +52,10 @@ body {
 .header .fa {
     color: $white;
     align-self: center;
+    
+    .fa-bars {
+        font-size: 2rem;
+    }
 }
 
 .header .tag {
@@ -90,6 +94,13 @@ body {
     margin-top: -5px;
     margin-right: 0;
     margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+.navbar .button-collapse {
+    margin-top: 12px;
+    font-size: 2rem;
     }
 }
 
@@ -144,6 +155,7 @@ body {
     
     a {
         color: $rgba-white-light;
+        font-size: .9rem;
     }
     
     .active {
@@ -151,9 +163,20 @@ body {
     }
 }
 
+@media only screen and (max-width : 1992px) {
+.header .navbar .breadcrumb,
+.header .navbar .breadcrumb a {
+    font-size: .9rem;
+    }
+}
+
+
 .breadcrumb-item + .breadcrumb-item::before {
     color: $white;
 }
+
+
+
 
 //////////Tabs-wrapper
 
@@ -164,7 +187,6 @@ body {
 .classic-tabs.tabs-cyan li a.active {
     border-color: $color-mainpanel;
 }
-
 
 .classic-tabs li a {
     display: block;
@@ -219,10 +241,6 @@ body {
 .side-nav .sidenav-bg {
     min-width: 260px;
 }
-
-//.fixed-sn .double-nav {
-//    padding-left: 260px;
-//}
 
 .mdb-skin .side-nav {
     background-color: $color-sidebar;
@@ -309,4 +327,46 @@ body {
     position: relative;
     top: 3px;
     background-color: $color-sidebar;
+}
+
+
+////////// Separators
+
+.page-name {
+    text-align: center;
+    border-bottom: 1px solid darken($color-mainpanel, 15%);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.page-name-xl {
+    @extend .page-name;
+    font-size: 2rem;
+}
+
+.page-name-l {
+    @extend .page-name;
+    font-size: 1.2rem;
+}
+
+
+////////// Tabels
+
+.table {
+    font-size: .9rem;
+}
+
+.table thead th {
+    background-color: $color-select;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: $white;
+    
+    &:hover {
+        background-color: darken($white, 15%);
+    }
 }
