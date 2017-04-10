@@ -104,6 +104,13 @@ body {
     }
 }
 
+@media only screen and (max-width : 768px) {
+.hamburger-icon {
+    margin-right: auto;
+    }
+}
+
+
 .header .user-nav {
     height: 70px;
 }
@@ -144,7 +151,7 @@ body {
     text-transform: uppercase;
     font-size: .9rem;
     padding-left: 2rem;
-    align-self: center;
+    align-self: flex-end;
     margin-bottom: 0;
     font-weight: 300;
     white-space: nowrap;
@@ -170,18 +177,22 @@ body {
     }
 }
 
-
 .breadcrumb-item + .breadcrumb-item::before {
     color: $white;
 }
 
-
+@media only screen and (max-width : 768px) {
+.header .navbar .breadcrumb {
+    display: none !important;
+    }
+}
 
 
 //////////Tabs-wrapper
 
 .classic-tabs.tabs-cyan {
     background-color: lighten($color-nav, 5%);
+    padding-right: 0px;
 }
 
 .classic-tabs.tabs-cyan li a.active {
@@ -338,6 +349,7 @@ body {
     margin-bottom: 2rem;
     text-transform: uppercase;
     font-weight: 300;
+    font-weight: 300;
 }
 
 .page-name-xl {
@@ -370,3 +382,62 @@ body {
         background-color: darken($white, 15%);
     }
 }
+
+
+////////// Buttons
+
+.btn {
+    font-family: $font-family-base;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+
+.btn.btn-lg, .btn-group-lg > .btn {
+    padding: 1.5rem 3.9rem;
+    border-radius: .4rem;
+    font-size: .8rem;
+}
+
+.btn-footer {
+    justify-content: center;
+    border-top: 1px solid darken($color-mainpanel, 15%);
+    margin-top: 30px;
+}
+
+.btn-header {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn .fa.left {
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+
+///Btn Colors
+
+.btn-save {
+    background-color: $color-complete;
+    
+    &:hover, &:active, &:focus {
+        background-color: $color-complete;
+    }
+}
+
+.btn-neutral {
+    background-color: $color-nav;
+}
+
+.btn-attention {
+    background-color: $color-incomplete;
+}
+
+.btn-blank {
+    background-color: $color-sidebar;
+}
+
+.btn-cancel {
+    background-color: $color-cancel;
+}
+
