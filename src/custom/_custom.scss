@@ -333,21 +333,24 @@ body {
 ////////// Separators
 
 .page-name {
-    text-align: center;
     border-bottom: 1px solid darken($color-mainpanel, 15%);
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-weight: 300;
 }
 
 .page-name-xl {
     @extend .page-name;
     font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
 }
 
 .page-name-l {
     @extend .page-name;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: 600;
+    padding-bottom: .5rem;
 }
 
 
@@ -370,3 +373,37 @@ body {
         background-color: darken($white, 15%);
     }
 }
+
+
+////////// Inputs
+
+.md-form {
+    margin-bottom: 2.2rem;
+}
+
+.md-form label {
+    text-indent: 1rem;
+}
+
+.md-form label.active {
+    transform: translateY(-175%);
+    text-indent: .1rem;
+    text-transform: uppercase;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search-md], input[type=search], textarea.md-textarea {
+    background-color: $white;
+    border-radius: .4rem;
+    border: 1px solid lighten($color-sidebar, 70%);
+    text-indent: 1rem;
+}
+
+input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search-md]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.md-textarea:focus:not([readonly]) + label {
+    color: $color-select;
+}
+
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search-md]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #5CB3FD;
+    box-shadow: none;
+}
+
