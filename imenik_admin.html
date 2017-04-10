@@ -64,7 +64,7 @@
                 <li class="breadcrumb-item active">Data</li>
             </ol>
             <!--/. Breadcrumb -->
-             <div class="float-right">
+             <div class="float-right hamburger-icon">
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
             </div>
         </nav>
@@ -92,7 +92,14 @@
     <div class="content">
         <div class="page-name-xl">Ime i prezime</div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
+                <select class="mdb-select">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Example label</label>
                 <div class="page-name-l">Ime i prezime</div>
                 <div class="md-form">
                     <input type="text" id="form1" class="form-control">
@@ -102,27 +109,33 @@
                     <input type="text" id="form2" class="form-control">
                     <label for="form2" class="">Prezime</label>
                 </div>
-                <fieldset class="form-group">
-                    <input name="group1" type="radio" id="radio11" checked="checked">
-                    <label for="radio11">M</label>
-                </fieldset>
-                <fieldset class="form-group">
-                    <input name="group1" type="radio" id="radio21">
-                    <label for="radio21">Ž</label>
-                </fieldset>
+                <div class="page-name-m">Spol</div>
+                <form class="form-inline mb-3">
+                    <fieldset class="form-group">
+                        <input name="group1" type="radio" id="radio11" checked="checked">
+                        <label for="radio11">M</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input name="group1" type="radio" id="radio21">
+                        <label for="radio21">Ž</label>
+                    </fieldset>
+                </form>
                 <div class="md-form">
                     <input type="text" id="form3" class="form-control">
                     <label for="form3" class="">Organizacijska jedinica</label>
                 </div>
                         
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class=" md-form">
-                            <input type="text" id="form4" class="form-control">
-                            <label for="form4" class="">Mobitel</label>
-                        </div>
+                  <div class="col-md-3">
+                       <select class="mdb-select">
+                            <option value=""disabled selected>Odaberi</option>
+                            <option value="1">091</option>
+                            <option value="2">098</option>
+                            <option value="3">099</option>
+                        </select>
+                        <label>Predbroj</label>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-9">
                         <div class=" md-form">
                             <input type="text" id="form4" class="form-control">
                             <label for="form4" class="">Mobitel</label>
@@ -156,12 +169,17 @@
                     <label for="form4" class="">Mjesto rada</label>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="md-form">
                     <input type="text" id="form5" class="form-control">
                     <label for="form5" class="">Example label</label>
                 </div>
             </div>
+        </div>
+        <div class="btn-footer d-flex p-2">
+            <button type="button" class="btn btn-lg btn-save">Spremi</button>
+            <button type="button" class="btn btn-lg btn-cancel">Odustani</button>
+            <button type="button" class="btn btn-lg btn-unique"><i class="fa fa-external-link left"></i>Zaduži</button>
         </div>
     </div>
 </div>
