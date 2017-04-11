@@ -41,7 +41,43 @@ body {
 }
 
 
+////////// Typography
+
+.login h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
 //////////Styles
+
+///Login
+
+.login {
+    background-image: url(../../img/login_bckg.jpg);
+    background-position: center;
+    background-size: cover; 
+    height: 100vh;
+    
+    .card {
+        top: 20vh;
+        width: 500px; 
+        border-radius: 3rem;
+        
+        .form-header {
+            margin-top: 0;
+            border-radius: 1.8rem;
+            box-shadow: none;
+        }
+    }
+    
+    .options {
+        text-transform: uppercase;
+        font-size: .8rem;
+    }
+}
+
+
 
 //////////Main-nav styles
 
@@ -414,6 +450,10 @@ body {
     transform: translateY(-175%);
 }
 
+.md-form .prefix.active {
+    color: $color-nav;
+}
+
 input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search-md], input[type=search], textarea.md-textarea {
     background-color: $white;
     border-radius: .4rem;
@@ -457,7 +497,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     color: initial;
     position: absolute;
     right: 10px;
-    top: 16px;
+    top: 20px;
     font-size: 10px;
     z-index: 1;
 }
