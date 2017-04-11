@@ -62,12 +62,15 @@ body {
     .card {
         top: 20vh;
         width: 500px; 
-        border-radius: 3rem;
+        border-radius: 2.5rem;
+        background-color: $color-mainpanel;
         
         .form-header {
             margin-top: 0;
-            border-radius: 1.8rem;
+            border-radius: 1.5rem;
             box-shadow: none;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
         }
     }
     
@@ -77,7 +80,13 @@ body {
     }
 }
 
+///Search
 
+.search-big {
+    width: 50%;
+    margin: 0 auto;
+    
+}
 
 //////////Main-nav styles
 
