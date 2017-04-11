@@ -443,6 +443,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 .select-wrapper + label {
     text-indent: .1rem;
     text-transform: uppercase;
+    color: #757575
 }
 
 .dropdown-content {
@@ -456,6 +457,24 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     top: 16px;
     font-size: 10px;
     z-index: 1;
+}
+
+.profile_xl {
+    border-radius: 50%;
+    border: 5px solid $white;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.pos_rel {
+    position: relative;
+    
+    label {
+        margin-top: -.4rem;
+    }
 }
 
 ////////// Buttons
@@ -476,6 +495,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     justify-content: center;
     border-top: 1px solid darken($color-mainpanel, 15%);
     margin-top: 30px;
+    margin-bottom: 10rem;
 }
 
 .btn-header {
