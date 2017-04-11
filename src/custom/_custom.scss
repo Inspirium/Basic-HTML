@@ -435,19 +435,22 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     border-radius: .4rem;
     border: 1px solid lighten($color-sidebar, 70%);
     text-indent: 1rem;
-    margin-top: .4rem;
+    margin-top: .2rem;
     color: $color-body_text;
     margin-bottom: 30px;
+    height: 3.2rem;
 }
 
 .select-wrapper + label {
     text-indent: .1rem;
     text-transform: uppercase;
-    color: #757575
+    color: #757575;
+    top: -1rem;
 }
 
 .dropdown-content {
-    margin-top: .4rem;
+    margin-top: .2rem;
+    border-radius: .5rem;
 }
 
 .select-wrapper span.caret {
@@ -473,7 +476,7 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     position: relative;
     
     label {
-        margin-top: -.4rem;
+        margin-top: -.2rem;
     }
 }
 
